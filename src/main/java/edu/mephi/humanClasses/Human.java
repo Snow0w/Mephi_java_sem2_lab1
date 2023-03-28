@@ -25,4 +25,7 @@ public abstract class Human {
   }
   public boolean isMale() { return male; }
   public void setMale(boolean male) { this.male = male; }
+  public void sayHello() {
+    System.out.println(name + " " + lastName + " " + fathersName);
+  }
 }
