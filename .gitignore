@@ -8,8 +8,6 @@ build
 .gitattributes
 .project
 .settings/
-gradle/
 gradlew.bat
 settings.gradle
-gradlew
 files/.~lock.test.xlsx#
