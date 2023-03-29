@@ -10,10 +10,10 @@ public class HumanProfFactory extends HumanFactory {
                           ArrayList<String> femaleName,
                           ArrayList<String> maleLastName,
                           ArrayList<String> femaleLastName,
-                          ArrayList<String> femaleFathersName,
-                          ArrayList<String> maleFathersName) {
-    super(maleName, femaleName, maleLastName, femaleLastName, femaleFathersName,
-          maleFathersName);
+                          ArrayList<String> maleFathersName,
+                          ArrayList<String> femaleFathersName) {
+    super(maleName, femaleName, maleLastName, femaleLastName, maleFathersName,
+          femaleFathersName);
   }
 
   @Override

@@ -16,8 +16,8 @@ public abstract class HumanFactory {
   public HumanFactory(ArrayList<String> maleName, ArrayList<String> femaleName,
                       ArrayList<String> maleLastName,
                       ArrayList<String> femaleLastName,
-                      ArrayList<String> femaleFathersName,
-                      ArrayList<String> maleFathersName) {
+                      ArrayList<String> maleFathersName,
+                      ArrayList<String> femaleFathersName) {
     this.maleName = maleName;
     this.femaleName = femaleName;
     this.maleLastName = new ArrayList<String>(maleLastName);

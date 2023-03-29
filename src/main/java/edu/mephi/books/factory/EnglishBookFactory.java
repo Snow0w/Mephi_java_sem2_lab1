@@ -1,5 +1,7 @@
 package edu.mephi.books.factory;
 
+import com.github.javafaker.Faker;
+import edu.mephi.books.EnglishFiction;
 import edu.mephi.books.EnglishTextbook;
 import edu.mephi.books.interfaces.Fiction;
 import edu.mephi.books.interfaces.Textbook;
@@ -13,6 +15,7 @@ public class EnglishBookFactory implements BookFactory {
   private ArrayList<String> authors;
   private ArrayList<String> university;
   private ArrayList<String> levels;
+  private Faker faker;
 
   public EnglishBookFactory() {
     this.textIter = 0;
@@ -31,6 +34,7 @@ public class EnglishBookFactory implements BookFactory {
         Arrays.asList("(beginner)", "(intermediate)", "(advanced)"));
     this.levels =
         new ArrayList<String>(Arrays.asList("bachelor", "magistracy"));
+    faker = new Faker();
   }
   @Override
   public Textbook createTextbook() {
@@ -48,7 +52,6 @@ public class EnglishBookFactory implements BookFactory {
 
   @Override
   public Fiction createFiction() {
-    // TODO Auto-generated method stub
-    return null;
+    return new EnglishFiction(faker.book().title());
   }
 }

@@ -1,16 +1,20 @@
 package edu.mephi.books.factory;
 
+import com.github.javafaker.Faker;
+import edu.mephi.books.RussianFiction;
 import edu.mephi.books.RussianTextbook;
 import edu.mephi.books.interfaces.Fiction;
 import edu.mephi.books.interfaces.Textbook;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Locale;
 
 public class RussianBookFactory implements BookFactory {
   private int textIter;
   private ArrayList<String> prevNames;
   private ArrayList<String> lastNames;
   private ArrayList<String> names;
+  private Faker faker;
 
   public RussianBookFactory() {
     this.textIter = 0;
@@ -20,6 +24,7 @@ public class RussianBookFactory implements BookFactory {
     this.prevNames = new ArrayList<String>(Arrays.asList("Учебник", "Пособие"));
     this.lastNames = new ArrayList<String>(Arrays.asList(
         "для начинащих", "базовый уровень", "продвинутый уровень"));
+    this.faker = new Faker(new Locale("ru"));
   }
 
   @Override
@@ -36,7 +41,7 @@ public class RussianBookFactory implements BookFactory {
 
   @Override
   public Fiction createFiction() {
-    // TODO Auto-generated method stub
-    return null;
+    return new RussianFiction(faker.address().cityName() + " и " +
+                              faker.address().firstName());
   }
 }
