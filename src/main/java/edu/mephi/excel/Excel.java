@@ -3,10 +3,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
-import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
-// import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -21,8 +19,6 @@ public class Excel {
     } catch (IOException e) {
       e.printStackTrace();
     }
-    // System.out.println(
-    //     wb.getSheetAt(0).getRow(0).getCell(0).getStringCellValue());
   }
 
   private void initWorkbook(String filename) {
