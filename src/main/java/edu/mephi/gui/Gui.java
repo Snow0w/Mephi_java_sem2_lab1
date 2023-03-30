@@ -13,8 +13,6 @@ import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 public class Gui extends JFrame {
-  private static final int HEIGHT = 120;
-  private static final int WIDTH = 600;
   private JTree tree;
   private DefaultMutableTreeNode rootTree;
   private DefaultMutableTreeNode students;
@@ -25,7 +23,6 @@ public class Gui extends JFrame {
   public Gui(String name, ArrayList<Human> people, ArrayList<Bookable> books) {
     super(name);
     rand = new Random();
-    this.setSize(WIDTH, HEIGHT);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setLocationRelativeTo(null);
     this.setLayout(new BorderLayout());
